@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: rgb(31, 29, 29);
+    color: white;
+}
+
+/* ========== HEADER ========== */
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: rgb(31, 29, 29);
+    background-image: url(asset/home.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 5%; 
+}
+
+nav {
+    /* width: 100%; */
+    /* position: fixed; */
+    /* background: rgb(61, 74, 75); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.logo {
+    width: 150px;
+    height: 100px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 50px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(0, 255, 255);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%;
+}
+
+.header-text h1 {
+    color: aliceblue;
+    font-size: 120px;
+} 
+
+.header-text h1 span {
+    color: rgb(0, 255, 255);
+}
+
+.header-text p {
+    margin-top: 15px;
+    font-size: 25px;
+    padding-left: 10px;
+}
+
+/* ========== ABOUT ========== */
+
+.about {
+    padding: 100px 0;
+    color: rgba(0, 102, 142, 0.50);
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    padding-top: 10%;
+    flex-basis: 35%; /*Width of the column*/
+}
+
+.about-col-1 img {
+    width: 100%;
+}
+
+.about-col-2 {
+    padding-top: 5%;
+    text-align: center;
+    flex-basis: 60%;
+}
+
+.about-col-2 h1 {
+    font-size: 60px;
+    font-weight: bolder;
+    color: rgba(65, 166, 206, 0.25);
+}
+
+.about-col-2 h2 {
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color: rgb(219, 204, 204);
+}
+
+.about-col-2 p {
+    color: white;
+    padding-top: 100px;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    line-height: 50px;
+}
+
+.about-col-2 span {
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.btn {
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 5px solid rgba(163, 156, 156, 0.5);
+    padding: 15px 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: rgba(163, 156, 156, 0.5);
+    transition: transform 1s;
+}
+
+.btn:hover {
+    background: rgba(35, 103, 121, 0.514);
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* ========== RESUME ========== */
+
+.resume {
+    padding: 30px 0;
+} 
+
+.resume-col {
+    text-align: center;
+    flex-basis: 60%;
+}
+
+.resume-col h1 {
+    font-size: 60px;
+    font-weight: bolder;
+    color: rgba(65, 166, 206, 0.25);
+}
+
+.resume-col h2 {
+    padding-bottom: 100px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color: rgb(219, 204, 204);
+}
+
+.education-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+    margin-top: 50px;
+}
+
+.education-list div {
+    background-color:rgb(88, 91, 92);
+    padding: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: transform 1s;
+}
+
+.education-list div:hover {
+    background: rgba(65, 166, 206, 0.5);
+    transform: translateY(-10px);
+}
+
+.education-list div img {
+    width: 75%;
+    margin-bottom: 25px;
+}
+
+.education-list div h2 {
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.education-list div p {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.education-list div a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 15px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.education-list div a:hover {
+    color: aqua;
+}
+
+/* ========== PROJECTS ========== */
+
+.projects {
+    padding: 60px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+    margin-top: 50px;
+    padding-bottom: 40px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 1s;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.layer {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgb(55, 144, 179));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0, 40px;
+    text-align: center;
+    transition: height 0.5s;
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.layer h3 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.layer p {
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.layer a {
+    margin-top: 20px;
+    text-decoration: none;
+    width: 10%;
+}
+
+/* ========== CONTACT ========== */
+
+#contact {
+    padding-top: 50px;
+}
+
+.row {
+    padding-bottom: 50px;
+}
+
+.resume-col p {
+    padding-top: 20px;
+    padding-bottom: 80px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact-left {
+    flex-basis: 35%;
+}
+
+.contact-left p {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.contact-left p i {
+    color: rgb(60, 138, 138);
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.contact-left h3 {
+    padding-top: 50px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    color: rgb(199, 203, 206);
+}
+
+.social-media {
+    margin-top: 30px;
+}
+
+.social-media a {
+    text-decoration: none;
+    font-size: 50px;
+    margin-right: 15px;
+    color: rgb(136, 139, 141);
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-media a:hover {
+    color: rgb(60, 138, 138);
+    transform: translateY(-5px);
+}
+
+.contact-right {
+    flex-basis: 60%;
+}
+
+.contact-right form {
+    width: 100%;
+}
+
+form input, form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: rgb(48, 51, 51);
+    padding: 15px;
+    margin: 15px 0;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.sub-btn {
+    display: inline-block;
+    padding: 14px 50px;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px auto;
+    width: fit-content;
+    border: 1px solid rgb(53, 49, 49);
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+    background: rgb(60, 138, 138);
+    cursor: pointer; 
+}
+
+.copywrite {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    background: rgb(61, 74, 75);
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.copywrite i {
+    color: aqua;
+}
+
+/* =========== CSS for Small Screen ==========*/
+@media only screen and (max-width: 600px) {
+    .header {
+        background-image: url(asset/phone.png);
+    }
+}
